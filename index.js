@@ -6,8 +6,8 @@ app.get('/', (request, response) => {
     response.send('ola codespaces')
 })
 
-app.get('/mensage', (resquest, response) => {
-    response.send('boa tarde')
+app.get('/mensage/:nome', (resquest, response) => {
+    response.send('boa tarde' + resquest.params['nome'])
 })
 
 app.listen(port, () => {
